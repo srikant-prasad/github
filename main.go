@@ -2,7 +2,6 @@ package main
 
 import (
 	"html/template"
-	"io"
 	"net/http"
 )
 
@@ -13,7 +12,8 @@ func init()  {
 }
 
 func index(w http.ResponseWriter, r *http.Request)  {
-	io.WriteString(w, "This is Home pages!")
+	// io.WriteString(w, "This is Home pages!")
+	tpl.ExecuteTemplate(w, "index.gohtml", nil)
 }
 
 func main()  {
