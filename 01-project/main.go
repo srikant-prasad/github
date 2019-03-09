@@ -18,7 +18,7 @@ func index(w http.ResponseWriter, r *http.Request)  {
 
 func about(w http.ResponseWriter, r *http.Request)  {
 	// io.WriteString(w, "This is Home pages!")
-	tpl.ExecuteTemplate(w, "index.gohtml", nil)
+	tpl.ExecuteTemplate(w, "about.gohtml", nil)
 }
 
 func main()  {
